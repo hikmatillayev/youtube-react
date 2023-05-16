@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/material"
-import { logo } from "../../constants/constants"
+import { logo } from "../../constants"
 import { colors } from '../../constants/colors'
 import { Link } from "react-router-dom"
 import SearchBar from "../search-bar/search-bar"
