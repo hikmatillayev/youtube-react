@@ -20,7 +20,6 @@ const Main = () => {
             }
         }
         getData(getData)
-        console.log(getData)
     }, [])
 
     return (
