@@ -13,14 +13,14 @@ const Main = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const data = await ApiService.fetching('captions')
-                setVideos(data)
+                const data = await ApiService.fetching(`search?part=snippet&q={selectedCategory}`)
+                setVideos(data.data.items)
             } catch (error) {
                 console.log(error)
             }
         }
-        getData(getData)
-        console.log(getData)
+
+        getData()
     }, [])
 
     return (
