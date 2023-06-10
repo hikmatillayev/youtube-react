@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
   height: 1px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgb(114, 113, 113);
   border-radius: 10px;
   height: 200px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
@@ -25,7 +25,7 @@
   width: 350px;
 }
 
-.category-btn{
+.category-btn {
   font-weight: bold !important;
   text-transform: capitalize;
   display: flex;
@@ -44,4 +44,10 @@
 
 .category-btn:hover span {
   color: white !important;
+}
+
+@media screen and(max-width:600px) {
+  .search-bar {
+    width: 200px;
+  }
 }

@@ -1,5 +1,4 @@
 import { Avatar, Card, CardContent, CardMedia, Stack, Typography, } from "@mui/material"
-import { colors } from "../../constants/colors"
 import moment from 'moment'
 import { CheckCircle } from "@mui/icons-material"
 

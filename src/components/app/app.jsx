@@ -2,7 +2,7 @@ import { Box } from "@mui/material"
 import { Route, Routes } from "react-router-dom"
 import { Main, Channel, VideoDetail, Search, Navbar } from "../"
 
-const App = () => {
+const App = () => { 
   return (
     <Box>
       <Navbar />
