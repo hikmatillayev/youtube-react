@@ -8,7 +8,7 @@ const Videos = ({ videos }) => {
         return <Loader />
     }
     return (
-        <Stack
+        <Box
             width={'100%'}
             direction={'row'}
             flexWrap={'wrap'}
@@ -23,7 +23,7 @@ const Videos = ({ videos }) => {
                     {item.id.channelId && <ChannelCard video={item} />}
                 </Box>
             ))}
-        </Stack>
+        </Box>
     )
 }
 
