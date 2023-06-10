@@ -10,15 +10,13 @@ const Videos = ({ videos }) => {
     return (
         <Box
             width={'100%'}
-            direction={'row'}
-            flexWrap={'wrap'}
-            justifyContent={'center'}
-            alignItems={'center'}
             gap={2}
+            display='grid'
+            gridTemplateColumns='repeat(4, 1fr)'
         >
-            {videos.map(item => (
+            {videos.map((item, idx) => (
 
-                <Box key={item.id.videoId}>
+                <Box key={idx} gridColumn='span '>
                     {item.id.videoId && <VideoCard video={item} />}
                     {item.id.channelId && <ChannelCard video={item} />}
                 </Box>

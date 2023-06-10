@@ -10,7 +10,7 @@ const VideoCard = ({ video }) => {
                 alt={video?.snippet?.title}
                 sx={{ width: { xs: '100%', sm: '360px', md: '305px' }, height: '180px' }}
             />
-            <CardContent sx={{ background: { xs: 'black', sm: 'red', md: 'yellow', lg: 'aqua' }, height: '200px', position: 'relative' }}>
+            <CardContent sx={{ height: '200px', position: 'relative' }}>
                 <>
                     <Typography my={'5px'} sx={{ opacity: '.4' }}>
                         {moment(video?.snippet?.publishedAt).fromNow()}
