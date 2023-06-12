@@ -1,16 +1,20 @@
-import { Avatar, Card, CardContent, CardMedia, Stack, Typography, } from "@mui/material"
+import { Avatar, Card, CardContent, CardMedia, Stack, Typography} from "@mui/material"
 import moment from 'moment'
+import { colors } from '../../constants/colors'
 import { CheckCircle } from "@mui/icons-material"
+import { Link } from "react-router-dom"
 
 const VideoCard = ({ video }) => {
     return (
         <Card sx={{ width: { xs: '100%', sm: '360px', md: '305px' }, boxShadow: 'none', borderRadius: 0 }}>
-            <CardMedia
-                image={video?.snippet?.thumbnails?.high?.url}
-                alt={video?.snippet?.title}
-                sx={{ width: { xs: '100%', sm: '360px', md: '305px' }, height: '180px' }}
-            />
-            <CardContent sx={{ height: '200px', position: 'relative' }}>
+            <Link to={`/video/${video.id.videoId}`}>
+                <CardMedia
+                    image={video?.snippet?.thumbnails?.high?.url}
+                    alt={video?.snippet?.title}
+                    sx={{ width: { xs: '100%', sm: '360px', md: '305px' }, height: '180px' }}
+                />  
+            </Link>
+            <CardContent sx={{ background: colors.primary, height: '200px', position: 'relative' }}>
                 <>
                     <Typography my={'5px'} sx={{ opacity: '.4' }}>
                         {moment(video?.snippet?.publishedAt).fromNow()}

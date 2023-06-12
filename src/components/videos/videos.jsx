@@ -1,12 +1,12 @@
-import { Box, Stack } from "@mui/material"
+import { Box } from "@mui/material"
 import VideoCard from "../video-card/video-card"
 import ChannelCard from "../channel-card/channel-card"
 import Loader from "../loader/loader"
 
 const Videos = ({ videos }) => {
-    if (!videos.length) {
-        return <Loader />
-    }
+    console.log(videos)
+    if (!videos.length) return <Loader />
+    
     return (
         <Box
             width={'100%'}

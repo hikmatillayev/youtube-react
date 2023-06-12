@@ -3,18 +3,22 @@ import { colors } from '../../constants/colors'
 import { useEffect, useState } from "react"
 import { Category, Videos } from "../"
 import { ApiService } from "../../service/api.service"
+import { category } from "../../constants"
 
 const Main = () => {
     const [selectedCategory, setSelectedCategory] = useState('New')
     const [videos, setVideos] = useState([])
+    console.log(videos)
 
     const selectedCategoryHandler = category => setSelectedCategory(category)
+    console.log(category)
 
     useEffect(() => {
         const getData = async () => {
             try {
                 const data = await ApiService.fetching(`search?part=snippet&q={selectedCategory}`)
-                setVideos(data.data.items)
+                setVideos(data.items)
+  
             } catch (error) {
                 console.log(error)
             }

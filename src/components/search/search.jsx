@@ -13,7 +13,6 @@ const Search = () => {
         const getData = async () => {
             try {
                 const data = await ApiService.fetching(`search?part=snippet&q=${id}`)
-                console.log(data)
                 setVideos(data.items)
             } catch (error) {
                 console.log(error)
@@ -22,7 +21,6 @@ const Search = () => {
 
         getData()
     }, [id])
-    console.log(videos)
 
     return (
         <Box p={2} sx={{ height: '90vh' }}>
