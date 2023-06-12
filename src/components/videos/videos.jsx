@@ -4,7 +4,6 @@ import ChannelCard from "../channel-card/channel-card"
 import Loader from "../loader/loader"
 
 const Videos = ({ videos }) => {
-    console.log(videos)
     if (!videos.length) return <Loader />
     
     return (

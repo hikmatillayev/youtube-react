@@ -8,7 +8,6 @@ import { category } from "../../constants"
 const Main = () => {
     const [selectedCategory, setSelectedCategory] = useState('New')
     const [videos, setVideos] = useState([])
-    console.log(videos)
 
     const selectedCategoryHandler = category => setSelectedCategory(category)
     console.log(category)
