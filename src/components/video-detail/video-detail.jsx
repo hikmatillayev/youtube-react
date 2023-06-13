@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ApiService } from "../../service/api.service"
 import ReactPlayer from 'react-player'
-import { Box, Chip, Typography } from "@mui/material"
-import { Tag } from "@mui/icons-material"
+import { Box, Chip, Stack, Typography } from "@mui/material"
+import { FavoriteOutlined, MarkChatRead, Tag, Visibility } from "@mui/icons-material"
 import renderHTML from 'react-render-html'
 
 const VideoDetail = () => {
@@ -54,8 +54,22 @@ const VideoDetail = () => {
                         {videoDeatil.snippet.title}
                     </Typography>
                     <Typography variant="subtitle2" p={2} sx={{ opacity: '.7' }}>
-                        {videoDeatil.snippet.description}
+                        {renderHTML(videoDeatil.snippet.description)}
                     </Typography>
+                    <Stack direction='row' gap='20px' alignItems='center' py={1} px={2}>
+                        <Stack sx={{ opacity: 0.7 }} direction='row' alignItems='center' gap='3px'>
+                            <Visibility />
+                            {parseInt(videoDeatil.statistics.viewCount).toLocaleString()} views
+                        </Stack>
+                        <Stack sx={{ opacity: 0.7 }} direction='row' alignItems='center' gap='3px'>
+                            <FavoriteOutlined />
+                            {parseInt(videoDeatil.statistics.viewCount).toLocaleString()} views
+                        </Stack>
+                        <Stack sx={{ opacity: 0.7 }} direction='row' alignItems='center' gap='3px'>
+                            <MarkChatRead />
+                            {parseInt(videoDeatil.statistics.viewCount).toLocaleString()} views
+                        </Stack>
+                    </Stack>
                 </Box>
                 <Box width={'25%'}>Suggested video</Box>
             </Box>
